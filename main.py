@@ -3,11 +3,11 @@ from etl.transform import transform_reviews
 from etl.load import load_to_s3
 from datetime import datetime
 
-RAW_BUCKET = "rayban-etl-raw-steve"
-RAW_KEY = "reviews.csv"
+RAW_BUCKET = "raw_bucket_name"  #origin bucket
+RAW_KEY = "filename.csv" #raw csv file
 
-PROCESSED_BUCKET = "rayban-etl-processed-steve"
-PROCESSED_KEY = "rayban_reviews_clean.csv"
+PROCESSED_BUCKET = "processed_bucket_name"  #origin bucket
+PROCESSED_KEY = "processed_filename.csv" #raw csv file
 
 def main():
     print(f"[{datetime.utcnow()}] Starting ETL pipeline")
